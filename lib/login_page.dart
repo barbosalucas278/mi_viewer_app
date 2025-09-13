@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:mi_viewer_app/components/bottom_navigation_bar.dart';
 import 'views/live_stream_page.dart';
 
 final FlutterAppAuth appAuth = FlutterAppAuth();
@@ -55,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
       // Navegar al stream
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LiveStreamPage()),
+        MaterialPageRoute(builder: (context) => const NavigationMain()),
       );
     } catch (e) {
       print("Error en login: $e");
